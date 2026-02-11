@@ -216,6 +216,11 @@ button:hover {
   z-index: 10;
 }
 
+.flap {
+  pointer-events: none;
+}
+
+
 
 
 
