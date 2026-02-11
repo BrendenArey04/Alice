@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
     screens.forEach(s => s.classList.remove("active"));
     document.getElementById(id).classList.add("active");
   }
-const envelope = document.getElementById("openEnvelope");
 
   /* Screen 1 → 2 */
   envelope.addEventListener("click", () => {
@@ -52,3 +51,4 @@ const envelope = document.getElementById("openEnvelope");
   });
 
 });
+
