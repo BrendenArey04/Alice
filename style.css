@@ -1,36 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Be My Valentine 💘</title>
+body {
+  background: linear-gradient(135deg, #ff5fa2, #b388ff);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins&display=swap" rel="stylesheet">
+.card {
+  background: #fff7fb;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
 
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  color: #2b193d;
+}
 
-  <div class="card">
-    <h1>Hey Beautiful 💖</h1>
-    <p>I made this just for you.</p>
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px 0;
+}
 
-    <div class="gallery">
-      <img src="images/pic1.jpg" alt="Memory 1">
-      <img src="images/pic2.jpg" alt="Memory 2">
-      <img src="images/pic3.jpg" alt="Memory 3">
-    </div>
+.gallery img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 15px;
+}
 
-    <h2>Will you be my Valentine? 💌</h2>
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
 
-    <div class="buttons">
-      <button id="yesBtn">Yes 💕</button>
-      <button id="noBtn">No 🙄</button>
-    </div>
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
 
-    <p id="response"></p>
-  </div>
+#yesBtn {
+  background: #ff5fa2;
+  color: white;
+}
 
-  <script src="script.js"></script>
-</body>
-</html>
+#noBtn {
+  background: #d1c4e9;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#response {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff5fa2;
+}
