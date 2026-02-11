@@ -8,10 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* Screen 1 → 2 */
-  const envelope = document.getElementById("openEnvelope");
-  envelope.addEventListener("click", () => {
+envelope.addEventListener("click", () => {
+  envelope.classList.add("open");
+
+  setTimeout(() => {
     showScreen("screen2");
-  });
+  }, 1000);
+});
+
 
   /* Screen 2 → 3 */
   const nextBtn = document.querySelector(".nextBtn");
