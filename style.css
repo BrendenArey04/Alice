@@ -193,6 +193,11 @@ button:hover {
   transform-style: preserve-3d;
 }
 
+.flowers {
+  pointer-events: none;
+}
+
+
 
 
 
