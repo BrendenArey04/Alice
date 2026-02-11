@@ -183,6 +183,17 @@ button:hover {
   font-weight: bold;
 }
 
+/* Give the envelope container perspective */
+#screen1 {
+  perspective: 800px;
+}
+
+/* Make the flap preserve 3D transforms */
+.envelope {
+  transform-style: preserve-3d;
+}
+
+
 
 
 
