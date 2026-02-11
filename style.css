@@ -205,6 +205,12 @@ button:hover {
   z-index: 10;
 }
 
+/* Disable clicks on envelope children */
+#openEnvelope * {
+  pointer-events: none;
+}
+
+
 
 
 
