@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   const screens = document.querySelectorAll(".screen");
+  const envelope = document.getElementById("openEnvelope");
 
   function showScreen(id) {
     screens.forEach(s => s.classList.remove("active"));
@@ -8,14 +9,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* Screen 1 → 2 */
-envelope.addEventListener("click", () => {
-  envelope.classList.add("open");
+  envelope.addEventListener("click", () => {
+    envelope.classList.add("open");
 
-  setTimeout(() => {
-    showScreen("screen2");
-  }, 1000);
-});
-
+    setTimeout(() => {
+      showScreen("screen2");
+    }, 1000);
+  });
 
   /* Screen 2 → 3 */
   const nextBtn = document.querySelector(".nextBtn");
@@ -51,5 +51,3 @@ envelope.addEventListener("click", () => {
   });
 
 });
-
-
