@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const response = document.getElementById("response");
 
   yesBtn.addEventListener("click", () => {
-    response.textContent = "LETS GOO 💖 I love you more than I have loved anything else!!!";
+    response.textContent = "LETS GOO 💖 I love you like I never loved anything else!!!";
 
     setInterval(() => {
       const heart = document.createElement("div");
