@@ -193,21 +193,10 @@ button:hover {
   transform-style: preserve-3d;
 }
 
-.flowers {
-  pointer-events: none;
-}
-
 /* Screen 1 layout fix */
 #screen1 {
   flex-direction: column;
   perspective: 800px;
-}
-
-/* Flowers should never intercept clicks */
-.flowers {
-  pointer-events: none;
-  position: relative;
-  z-index: 1;
 }
 
 /* Envelope must sit ABOVE flowers */
@@ -215,23 +204,6 @@ button:hover {
   position: relative;
   z-index: 10;
 }
-
-.flap {
-  pointer-events: none;
-}
-
-/* FORCE envelope to receive clicks */
-#openEnvelope {
-  pointer-events: auto !important;
-  cursor: pointer;
-}
-
-/* Disable clicks on ALL children */
-#openEnvelope * {
-  pointer-events: none !important;
-}
-
-
 
 
 
