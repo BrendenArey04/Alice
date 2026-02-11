@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(135deg, #ff5fa2, #b388ff);
+  background: linear-gradient(135deg, #0b0b0b, #5a0f1a);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -9,18 +9,20 @@ body {
 }
 
 .card {
-  background: #fff7fb;
+  background: #1a0f14;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 22px;
   text-align: center;
   width: 350px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+  color: #f5d6dc;
 }
 
 h1, h2 {
   font-family: 'Playfair Display', serif;
-  color: #2b193d;
+  color: #f2b6c6;
 }
+
 
 .gallery {
   display: flex;
@@ -30,11 +32,14 @@ h1, h2 {
 }
 
 .gallery img {
-  width: 90px;
-  height: 90px;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
   object-fit: cover;
-  border-radius: 15px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
+
 
 .buttons {
   display: flex;
