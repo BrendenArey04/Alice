@@ -220,6 +220,18 @@ button:hover {
   pointer-events: none;
 }
 
+/* FORCE envelope to receive clicks */
+#openEnvelope {
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+
+/* Disable clicks on ALL children */
+#openEnvelope * {
+  pointer-events: none !important;
+}
+
+
 
 
 
