@@ -11,17 +11,34 @@
 </head>
 <body>
 
+<!-- SCREEN 1: Envelope -->
+<div class="screen active" id="screen1">
+  <div class="envelope" id="openEnvelope">
+    <div class="heart">❤️</div>
+    <p>Open me</p>
+  </div>
+</div>
+
+<!-- SCREEN 2: Memories -->
+<div class="screen" id="screen2">
   <div class="card">
-    <h1>Hey Beautiful 💖</h1>
-    <p>I made this just for you.</p>
+    <h1>You Are So Beautiful 💖</h1>
+    <p>Every moment with you is my favorite.</p>
 
     <div class="gallery">
-      <img src="images/pic1.jpg" alt="Memory 1">
-      <img src="images/pic2.jpg" alt="Memory 2">
-      <img src="images/pic3.jpg" alt="Memory 3">
+      <img src="images/pic1.jpg">
+      <img src="images/pic2.jpg">
+      <img src="images/pic3.jpg">
     </div>
 
-    <h2>Will you be my Valentine? 💌</h2>
+    <button class="nextBtn">Click me 💌</button>
+  </div>
+</div>
+
+<!-- SCREEN 3: Valentine -->
+<div class="screen" id="screen3">
+  <div class="card">
+    <h1>Will you be my Valentine? 💘</h1>
 
     <div class="buttons">
       <button id="yesBtn">Yes 💕</button>
@@ -30,6 +47,11 @@
 
     <p id="response"></p>
   </div>
+
+  <!-- Hearts container -->
+  <div id="hearts"></div>
+</div>
+
 
   <script src="script.js"></script>
 </body>
