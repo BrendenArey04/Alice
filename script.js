@@ -1,44 +1,51 @@
-const screens = document.querySelectorAll(".screen");
+document.addEventListener("DOMContentLoaded", () => {
 
-function showScreen(id) {
-  screens.forEach(s => s.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-}
+  const screens = document.querySelectorAll(".screen");
 
-/* Screen 1 → 2 */
-document.getElementById("openEnvelope").addEventListener("click", () => {
-  showScreen("screen2");
+  function showScreen(id) {
+    screens.forEach(s => s.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+  }
+
+  /* Screen 1 → 2 */
+  const envelope = document.getElementById("openEnvelope");
+  envelope.addEventListener("click", () => {
+    showScreen("screen2");
+  });
+
+  /* Screen 2 → 3 */
+  const nextBtn = document.querySelector(".nextBtn");
+  nextBtn.addEventListener("click", () => {
+    showScreen("screen3");
+  });
+
+  /* No button dodge */
+  const noBtn = document.getElementById("noBtn");
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  /* Yes button hearts */
+  const yesBtn = document.getElementById("yesBtn");
+  const heartsContainer = document.getElementById("hearts");
+  const response = document.getElementById("response");
+
+  yesBtn.addEventListener("click", () => {
+    response.textContent = "YAY 💖 I love you so much!!!";
+
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "floating-heart";
+      heart.textContent = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heartsContainer.appendChild(heart);
+
+      setTimeout(() => heart.remove(), 4000);
+    }, 300);
+  });
+
 });
 
-/* Screen 2 → 3 */
-document.querySelector(".nextBtn").addEventListener("click", () => {
-  showScreen("screen3");
-});
-
-/* No button dodge */
-const noBtn = document.getElementById("noBtn");
-noBtn.addEventListener("mouseover", () => {
-  const x = Math.random() * 200 - 100;
-  const y = Math.random() * 200 - 100;
-  noBtn.style.transform = `translate(${x}px, ${y}px)`;
-});
-
-/* Yes button hearts */
-const yesBtn = document.getElementById("yesBtn");
-const heartsContainer = document.getElementById("hearts");
-const response = document.getElementById("response");
-
-yesBtn.addEventListener("click", () => {
-  response.textContent = "YAY 💖 I love you so much!!!";
-
-  setInterval(() => {
-    const heart = document.createElement("div");
-    heart.className = "floating-heart";
-    heart.textContent = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heartsContainer.appendChild(heart);
-
-    setTimeout(() => heart.remove(), 4000);
-  }, 300);
-});
 
