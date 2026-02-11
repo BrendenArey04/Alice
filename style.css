@@ -197,6 +197,26 @@ button:hover {
   pointer-events: none;
 }
 
+/* Screen 1 layout fix */
+#screen1 {
+  flex-direction: column;
+  perspective: 800px;
+}
+
+/* Flowers should never intercept clicks */
+.flowers {
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+}
+
+/* Envelope must sit ABOVE flowers */
+.envelope {
+  position: relative;
+  z-index: 10;
+}
+
+
 
 
 
